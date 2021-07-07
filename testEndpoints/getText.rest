@@ -1,0 +1,10 @@
+GET http://localhost:5000/text
+###
+GET http://localhost:5000/text?limit=2&page=1
+###
+GET http://localhost:5000/text?limit=1&page=2
+###
+GET http://localhost:5000/text?limit=1a
+###
+GET http://localhost:5000/text?limit=1u&page=4u
+###
