@@ -1,0 +1,22 @@
+{
+	"name": "text-storing-processing-salim-dellali-legal-doctrine-backend-challenge",
+	"version": "1.0.0",
+	"description": "",
+	"main": "src/server.js",
+	"scripts": {
+		"start": "node src/server.js",
+		"devserver": "nodemon src/server.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "salim dellali",
+	"license": "ISC",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.1",
+		"mongoose": "^5.13.2"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.9"
+	}
+}
