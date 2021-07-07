@@ -1,0 +1,11 @@
+GET http://localhost:5000/text/60e43ccdcccde5ec63eee35c/count/ar
+###
+GET http://localhost:5000/text/60e43ccdcccde5ec63eee35c/count/fr
+###
+GET http://localhost:5000/text/60e43ccdcccde5ec63eee35c/count/en
+###
+GET http://localhost:5000/text/60e43ccdcccde5ec63eee35c/count/pl
+###
+GET http://localhost:5000/text/60e43ccdcccde5ec63eee35c/count/wrongLangaugeCode
+###
+GET http://localhost:5000/text/invalidId123/count/fr
