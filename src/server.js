@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 app.use('/text', require('./routes/api/text/getText'));
+app.use('/text', require('./routes/api/text/getTextIdCount'));
 
 app.listen(PORT, (err) => {
 	if (err) console.error(err);
