@@ -10,6 +10,7 @@ app.use(cors());
 app.use(express.json());
 app.use('/text', require('./routes/api/text/postText'));
 app.use('/text', require('./routes/api/text/getText'));
+app.use('/text', require('./routes/api/text/putTextId'));
 app.use('/text', require('./routes/api/text/getTextIdCount'));
 app.use('/text', require('./routes/api/text/getTextIdCountLanguage'));
 app.use('/text', require('./routes/api/text/getTextIdCountLanguage'));

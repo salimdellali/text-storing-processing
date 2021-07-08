@@ -1,0 +1,42 @@
+PUT http://localhost:5000/text/60e70eddacf5505a4c63e724
+content-type: application/json
+
+{
+"en": "english text without french and arabic versions",
+"fr": "added french version using the PUT /text/textId route",
+"ar": ""
+}
+
+###
+
+PUT http://localhost:5000/text/60e7158ee4c1eb42a0551b82
+content-type: application/json
+
+{
+"en": "one two",
+"fr": "un deux",
+"ar": "واحد اثنان"
+}
+
+###
+
+PUT http://localhost:5000/text/invalidId
+content-type: application/json
+
+{
+"en": "invalid",
+"fr": "invalid",
+"ar": "خاطىء"
+}
+
+###
+
+PUT http://localhost:5000/text/000000000000000000000000
+
+content-type: application/json
+
+{
+"en": "non existant",
+"fr": "non existant",
+"ar": "لا يوجد"
+}

@@ -14,7 +14,9 @@ router.get('/:textId/count/:language', (req, res) => {
 	const language = req.params.language;
 
 	if (!isValidObjectId(textId)) {
-		res.json({ message: 'Invalid text ID, input a valid text ID!' });
+		res
+			.status(400)
+			.json({ message: 'Invalid text ID, input a valid text ID!' });
 		return;
 	}
 
@@ -22,6 +24,7 @@ router.get('/:textId/count/:language', (req, res) => {
 		.exec()
 		.then((text) => {
 			let responseMessage;
+			let statusCode = 200;
 			switch (language) {
 				case 'en':
 					responseMessage = { wordCountEn: wordCount(text.version.en) };
@@ -36,8 +39,9 @@ router.get('/:textId/count/:language', (req, res) => {
 					responseMessage = {
 						message: 'language code not supported!',
 					};
+					statusCode = 400;
 			}
-			res.json(responseMessage);
+			res.status(statusCode).json(responseMessage);
 		})
 		.catch((err) => {
 			res.json({ message: 'error has occured : ' + err });

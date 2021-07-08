@@ -1,5 +1,6 @@
 const express = require('express');
 const wordCount = require('word-count');
+const { isValidObjectId } = require('../../../helpers/mongooseUtils');
 const ObjectId = require('mongoose').Types.ObjectId;
 const router = express.Router();
 const Text = require('../../../models/Text');
@@ -13,7 +14,9 @@ router.get('/:textId/count', (req, res) => {
 	const textId = req.params.textId;
 
 	if (!isValidObjectId(textId)) {
-		res.json({ message: 'Invalid text ID, input a valid text ID!' });
+		res
+			.status(400)
+			.json({ message: 'Invalid text ID, input a valid text ID!' });
 		return;
 	}
 
@@ -33,11 +36,3 @@ router.get('/:textId/count', (req, res) => {
 });
 
 module.exports = router;
-
-function isValidObjectId(id) {
-	if (ObjectId.isValid(id)) {
-		if (String(new ObjectId(id)) === id) return true;
-		return false;
-	}
-	return false;
-}
