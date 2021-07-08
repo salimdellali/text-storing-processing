@@ -1,4 +1,4 @@
-const ENGLISH_PUNCTUATION = [
+const FRENCH_PUNCTUATION = [
 	`.`,
 	`?`,
 	`!`,
@@ -36,12 +36,14 @@ const ENGLISH_PUNCTUATION = [
 const INTELLECTUAL_PROPERTY_SYMBOLS = [`©`, `℗`, `®`, `℠`, `™`];
 
 // any word to ignore should be added here, in lowercase
-const ENGLISH_IGNORE_WORDS = [
-	...ENGLISH_PUNCTUATION,
+const FRENCH_IGNORE_WORDS = [
+	...FRENCH_PUNCTUATION,
 	...INTELLECTUAL_PROPERTY_SYMBOLS,
-	// 'the',
+	// 'la',
+	// 'de',
+	// 'suivant',
 ];
 
 module.exports = {
-	ENGLISH_IGNORE_WORDS: ENGLISH_IGNORE_WORDS,
+	FRENCH_IGNORE_WORDS: FRENCH_IGNORE_WORDS,
 };

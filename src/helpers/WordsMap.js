@@ -31,9 +31,19 @@ class WordsMap {
 		// find all keys having that max value
 		const wordsMostOccured = [];
 		for (let [key, value] of this.wordsMap.entries()) {
-			if (value === maxOccurence) wordsMostOccured.push({ [key]: value });
+			if (value === maxOccurence) wordsMostOccured.push(key);
 		}
 
-		return wordsMostOccured;
+		return {
+			count: maxOccurence,
+			words: wordsMostOccured,
+		};
+	}
+
+	getMostOccurentWordCount() {
+		const maxValue = Math.max(...this.wordsMap.values());
+		return maxValue;
 	}
 }
+
+module.exports = WordsMap;
