@@ -31,7 +31,7 @@ router.get('/:textId/count', (req, res) => {
 			res.json(wordCountAll);
 		})
 		.catch((err) => {
-			res.json({ message: 'error has occured : ' + err });
+			res.status(500).json({ message: 'error has occured : ' + err });
 		});
 });
 

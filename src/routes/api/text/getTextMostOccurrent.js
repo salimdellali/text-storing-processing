@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 			res.json(mostOccurentWordsInDatabase);
 		})
 		.catch((err) => {
-			res.json({ message: 'error has occured : ' + err });
+			res.status(500).json({ message: 'error has occured : ' + err });
 		});
 });
 

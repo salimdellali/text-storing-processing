@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
 			res.json(paginate(concernedTexts, count));
 		})
 		.catch((err) => {
-			res.json({ message: 'error has occured : ' + err });
+			res.status(500).json({ message: 'error has occured : ' + err });
 		});
 });
 

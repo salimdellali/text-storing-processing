@@ -38,7 +38,6 @@ router.put('/:textId', (req, res) => {
 			});
 		})
 		.catch((err) => {
-			// Server Error
 			res.status(500).send('Something went wrong!');
 		});
 });

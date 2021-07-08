@@ -44,7 +44,7 @@ router.get('/:textId/count/:language', (req, res) => {
 			res.status(statusCode).json(responseMessage);
 		})
 		.catch((err) => {
-			res.json({ message: 'error has occured : ' + err });
+			res.status(500).json({ message: 'error has occured : ' + err });
 		});
 });
 

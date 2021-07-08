@@ -5,7 +5,7 @@ const Text = require('../../../models/Text');
 /**
  * @route POST /text/
  * @desc Upload and store text with unique Id to database
- * @desc Public
+ * @access Public
  */
 router.post('/', (req, res) => {
 	const newText = new Text(
@@ -20,7 +20,12 @@ router.post('/', (req, res) => {
 		)
 	);
 
-	newText.save().then((text) => res.json(text));
+	newText
+		.save()
+		.then((text) => res.json(text))
+		.catch((err) => {
+			res.status(500).json({ message: 'error has occured : ' + err });
+		});
 });
 
 module.exports = router;
