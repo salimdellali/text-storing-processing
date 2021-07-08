@@ -9,7 +9,7 @@ const Text = require('../../../models/Text');
  * @desc	Fetch total word number of given a text
  * @access	Public
  */
-router.get('/:textId/count', async (req, res) => {
+router.get('/:textId/count', (req, res) => {
 	const textId = req.params.textId;
 
 	if (!isValidObjectId(textId)) {

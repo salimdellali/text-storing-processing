@@ -6,10 +6,10 @@ const Text = require('../../../models/Text');
 
 /**
  * @route	GET /text/:textId/count/:language
- * @desc	Fetch total word number of given a text
+ * @desc	Fetch total word number based on given text for specific languages ex: fr, ar, en
  * @access	Public
  */
-router.get('/:textId/count/:language', async (req, res) => {
+router.get('/:textId/count/:language', (req, res) => {
 	const textId = req.params.textId;
 	const language = req.params.language;
 
