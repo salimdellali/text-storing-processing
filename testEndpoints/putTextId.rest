@@ -1,3 +1,4 @@
+### Updates text with ID 60e70eddacf5505a4c63e724, returns success update message
 PUT http://localhost:5000/text/60e70eddacf5505a4c63e724
 content-type: application/json
 
@@ -7,8 +8,7 @@ content-type: application/json
 "ar": ""
 }
 
-###
-
+### Updates text with ID 60e7158ee4c1eb42a0551b82, returns success update message
 PUT http://localhost:5000/text/60e7158ee4c1eb42a0551b82
 content-type: application/json
 
@@ -18,8 +18,7 @@ content-type: application/json
 "ar": "واحد اثنان"
 }
 
-###
-
+### Returns error message when text ID is invalid
 PUT http://localhost:5000/text/invalidId
 content-type: application/json
 
@@ -29,8 +28,7 @@ content-type: application/json
 "ar": "خاطىء"
 }
 
-###
-
+### Returns error message when text ID doesn't exist
 PUT http://localhost:5000/text/000000000000000000000000
 
 content-type: application/json

@@ -1,1 +1,2 @@
+### Returns the most recurrent word in the whole text database
 GET http://localhost:5000/text/mostOccurrent

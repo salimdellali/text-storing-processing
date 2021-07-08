@@ -1,11 +1,17 @@
+### Returns the arabic word count of the text with ID 60e43ccdcccde5ec63eee35c
 GET http://localhost:5000/text/60e43ccdcccde5ec63eee35c/count/ar
-###
+
+### Returns the french word count of the text with ID 60e43ccdcccde5ec63eee35c
 GET http://localhost:5000/text/60e43ccdcccde5ec63eee35c/count/fr
-###
+
+### Returns the english word count of the text with ID 60e43ccdcccde5ec63eee35c
 GET http://localhost:5000/text/60e43ccdcccde5ec63eee35c/count/en
-###
+
+### Returns error message when language requested is not supported
 GET http://localhost:5000/text/60e43ccdcccde5ec63eee35c/count/pl
-###
+
+### Returns error message when language requested is not supported
 GET http://localhost:5000/text/60e43ccdcccde5ec63eee35c/count/wrongLangaugeCode
-###
+
+### Returns error message when text ID is invalid
 GET http://localhost:5000/text/invalidId123/count/fr

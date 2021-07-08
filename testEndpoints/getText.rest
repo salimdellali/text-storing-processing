@@ -1,10 +1,15 @@
+### Returns all texts
 GET http://localhost:5000/text
-###
+
+### Returns 2 first texts of the 1st page
 GET http://localhost:5000/text?limit=2&page=1
-###
+
+### Returns the 1st text of the second page
 GET http://localhost:5000/text?limit=1&page=2
-###
+
+### Returns all texts even if the params are wrong
 GET http://localhost:5000/text?limit=1a
-###
+
+### Returns all texts even if the params are wrong
 GET http://localhost:5000/text?limit=1u&page=4u
 ###

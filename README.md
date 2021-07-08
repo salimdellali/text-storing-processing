@@ -18,7 +18,7 @@
   - `routes/api/text/`: folder containing application’s endpoints (URIs) to respond to requests, contains a RESTful API to work on texts ressources.
   - `database.js` : contains code for Database connection
   - `server.js` : file that initialize the server and glues everything together
-- `testEndpoints/` : folder containing `.rest` files for endpoints tests, requires Rest Client extension to be installed in VSCode
+- `testEndpoints/` : folder containing `.rest` files for endpoints tests, requires Rest Client extension to be installed in VSCode, or hit the endpoints inside `.rest` files via any other API Client (example: Postman)
 
 ## Test endpoints
 
