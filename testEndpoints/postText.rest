@@ -1,0 +1,17 @@
+POST http://localhost:5000/text/
+content-type: application/json
+
+{
+"en": "one two three",
+"fr": "un deux trois",
+"ar": "واحد اثنان ثلاثة"
+}
+
+###
+
+POST http://localhost:5000/text/
+content-type: application/json
+
+{
+"en": "english text without french and arabic version"
+}
