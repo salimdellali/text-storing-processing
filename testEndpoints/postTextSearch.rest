@@ -1,0 +1,11 @@
+### make a fuzzy search on "fox"
+POST http://localhost:5000/text/search?q=fox
+
+### make a fuzzy search on "the"
+POST http://localhost:5000/text/search?q=the
+
+### make a fuzzy search on "فوق"
+POST http://localhost:5000/text/search?q=فوق
+
+### make a fuzzy search on "qsdqsdqsd"
+POST http://localhost:5000/text/search?q=qsdqsdqsd
