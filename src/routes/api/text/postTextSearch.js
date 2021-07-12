@@ -37,7 +37,9 @@ router.post('/search', (req, res) => {
 			let htmlResponse = prepareHtmlResponse(searchResult);
 			htmlResponse
 				? res.send(htmlResponse)
-				: res.send('Nothing has been found with the provided query');
+				: res
+						.status(400)
+						.send('Nothing has been found with the provided query');
 		})
 		.catch((err) => {
 			res.status(500).json({ message: 'error has occured : ' + err });
