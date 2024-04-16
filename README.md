@@ -38,7 +38,7 @@ You’ll be judged on code quality, readability and clean architecture.
 
 ## Demo
 
-[https://text-storing-processing.onrender.com](https://text-storing-processing.onrender.com/text)
+[https://text-storing-processing.onrender.com/text](https://text-storing-processing.onrender.com/text)
 
 ## API Reference
 
@@ -138,7 +138,7 @@ You’ll be judged on code quality, readability and clean architecture.
 ## Usage
 
 - Running locally the project won't work because of the `DB_CONNECTION` environmental variable inside `.env` file , and the `.env` file was ignored when pushing the code to GitHub repo.
-- Use the Render Live Demo link to hit the server: [https://text-storing-processing.herokuapp.com/](https://text-storing-processing.onrender.com/text)
+- Use the Render Live Demo link to hit the server: [https://text-storing-processing.onrender.com/text](https://text-storing-processing.onrender.com/text)
 
 ## Lessons Learned
 
